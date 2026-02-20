@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Hire AI | AI Interview Practice System</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/darkmode.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span>Secure Hire AI</span>
+    </div>
+
+    <nav>
+      <a href="#domains">Domains</a>
+      <a href="login.html" class="btn">Login</a>
+      <a href="signup.html" class="btn">Sign Up</a>
+      <button id="darkToggle" aria-label="Toggle Dark Mode">
+        <div class="toggle-circle">
+           <i class="fa-solid fa-moon"></i>
+        </div>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <canvas id="particles"></canvas>
+
+      <h1>AI-Powered Interview Practice</h1>
+      <p>
+        Secure Hire AI simulates real online interviews using 
+        <strong>AI interviewers</strong>, 
+        <strong>resume-based questions</strong>, 
+        and <strong>live proctoring</strong>.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="signup.html" class="btn">Get Started</a>
+        <a href="#features" class="btn-outline">Explore Features</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ================= FEATURES ================= -->
+  <section id="features" class="features">
+    <h2>Platform Features</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <img src="images/ai.png" alt="AI Interviewer" />
+        <h3>AI Interviewer</h3>
+        <p>Adaptive questions using Large Language Models.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/resume.png" alt="Resume Scanner" />
+        <h3>Resume Scanning</h3>
+        <p>Questions generated directly from your resume.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/faceDetect.png" alt="Face Detection" />
+        <h3>Face Proctoring</h3>
+        <p>Multiple faces detected → interview terminated.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/voicedetection.png" alt="Voice Detection" />
+        <h3>Voice Monitoring</h3>
+        <p>3 warnings for voice mismatch before termination.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DOMAINS ================= -->
+  <section id="domains" class="domains">
+    <h2>Interview Domains</h2>
+
+    <div class="domain-grid">
+      <div class="domain-card">
+        <i class="fa-solid fa-code"></i>
+        <h3>Technical</h3>
+        <p>Computer Science Engineering, Information Technology, AI-ML, Data Science, Cybersecurity, Electrical Engineering, Mechanical, Civil</p>
+      </div>
+
+      <div class="domain-card">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>Non-Technical</h3>
+        <p>MBA, BBA, Psychology, Clinical Health, HR</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta">
+    <h2>Practice Interviews. Improve Skills. Get Hired.</h2>
+    <a href="signup.html" class="btn">Start Your Interview</a>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© 2026 Secure Hire AI</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/darkmode.js"></script>
+</body>
+</html>

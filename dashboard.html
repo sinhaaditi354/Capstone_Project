@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | Secure Hire AI</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="logo">SecureHire<span>AI</span></div>
+    <nav>
+      <a href="index.html" class="btn-outline">Logout</a>
+      <button id="darkToggle" aria-label="Toggle Dark Mode">
+        <div class="toggle-circle">
+           <i class="fa-solid fa-moon"></i>
+        </div>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ================= DASHBOARD SECTION ================= -->
+  <section class="dashboard-hero">
+    <canvas id="particles"></canvas>
+    
+    <div class="dashboard-content">
+      <h1 class="glitch-text">Welcome to Your Dashboard 👋</h1>
+      <p class="subtitle">Upload resume, select domain, and prepare to get hired.</p>
+
+    <!-- ================= RESUME UPLOAD ================= -->
+    <div class="dashboard-card">
+      <h2><i class="fa fa-file-upload"></i> Upload Resume</h2>
+      <p>Your resume will be scanned to generate personalized questions</p>
+
+      <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx">
+<button class="btn" id="scanResumeBtn">Scan Resume</button>
+    </div>
+    <div id="toast" class="toast"></div>
+
+    <!-- ================= RECOMMENDED DOMAINS (Hidden by default) ================= -->
+    <div id="recommendedSection" class="dashboard-card" style="display: none;">
+      <div class="card-header">
+        <span class="badge">AI MATCH</span>
+        <h2><i class="fa fa-sparkles"></i> Recommended for Your Profile</h2>
+        <p>Based on your scanned resume, these domains fit your skills perfectly.</p>
+      </div>
+      <div id="recommendedGrid" class="domain-grid">
+        <!-- populated via JS -->
+      </div>
+    </div>
+
+    <!-- ================= ALL DOMAINS SELECTION ================= -->
+    <div class="dashboard-card">
+      <div class="card-header">
+        <h2><i class="fa fa-compass"></i> Explore All Domains</h2>
+        <p>Or manually choose an interview domain to practice</p>
+      </div>
+
+      <div class="domain-grid">
+        <!-- TECH DOMAINS -->
+        <div class="domain-card" onclick="startInterview('B.Tech CSE / IT')">
+          <div class="icon-box"><i class="fa fa-laptop-code"></i></div>
+          <h3>B.Tech CSE / IT</h3>
+        </div>
+
+        <div class="domain-card" onclick="startInterview('AI & ML')">
+          <div class="icon-box"><i class="fa fa-brain"></i></div>
+          <h3>AI & ML</h3>
+        </div>
+
+        <div class="domain-card" onclick="startInterview('Cybersecurity')">
+          <div class="icon-box"><i class="fa fa-shield-halved"></i></div>
+          <h3>Cybersecurity</h3>
+        </div>
+
+        <div class="domain-card" onclick="startInterview('Data Science')">
+          <div class="icon-box"><i class="fa fa-database"></i></div>
+          <h3>Data Science</h3>
+        </div>
+
+        <div class="domain-card" onclick="startInterview('Mechanical / Civil / EE')">
+          <div class="icon-box"><i class="fa fa-industry"></i></div>
+          <h3>Core Engineering</h3>
+        </div>
+
+        <!-- NON-TECH DOMAINS -->
+        <div class="domain-card" onclick="startInterview('MBA / BBA')">
+          <div class="icon-box"><i class="fa fa-briefcase"></i></div>
+          <h3>MBA / BBA</h3>
+        </div>
+
+        <div class="domain-card" onclick="startInterview('Psychology')">
+          <div class="icon-box"><i class="fa fa-heart-pulse"></i></div>
+          <h3>Psychology</h3>
+        </div>
+
+        <div class="domain-card" onclick="startInterview('Clinical Health')">
+          <div class="icon-box"><i class="fa fa-user-doctor"></i></div>
+          <h3>Clinical Health</h3>
+        </div>
+      </div>
+
+      <!-- START BUTTON CONTAINER -->
+      <div id="startInterviewContainer" class="start-container" style="display: none;">
+        <button id="finalStartBtn" class="btn btn-large">
+          <i class="fa fa-play"></i> Start Interview Session
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= INTERVIEW STATUS ================= -->
+    <div class="dashboard-card">
+      <h2><i class="fa fa-circle-info"></i> Interview Rules</h2>
+      <ul class="rules">
+        <li>🎤 Multiple voice detection → 3 warnings → interview terminated</li>
+        <li>👤 Multiple faces detected → interview terminated immediately</li>
+        <li>⏱️ Real-time AI evaluation & scoring</li>
+        <li>📊 Skill-gap analysis & learning recommendations</li>
+      </ul>
+      </div> <!-- end dashboard-card for rules -->
+    </div> <!-- end dashboard-content -->
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© 2026 Secure Hire AI | AI-Based Interview Practice Platform</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/darkmode.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
