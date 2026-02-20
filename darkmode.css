@@ -1,0 +1,169 @@
+/* ================= DARK MODE BASE ================= */
+body.dark {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+/* ================= NAVBAR ================= */
+/* ================= NAVBAR ================= */
+body.dark .navbar {
+  background-color: rgba(15, 23, 42, 0.9);
+  /* Dark semi-transparent */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  color: #e2e8f0;
+}
+
+/* If transparent class is there AND we are at top (not scrolled), keep it transparent */
+body.dark .navbar.nav-transparent:not(.scrolled) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+body.dark .navbar nav a {
+  color: #e5e7eb;
+}
+
+body.dark .navbar nav a:hover {
+  color: #60a5fa;
+}
+
+body.dark .logo {
+  color: #60a5fa;
+}
+
+/* ================= HERO ================= */
+body.dark .hero-text h1 {
+  color: #f8fafc;
+}
+
+body.dark .hero-text p {
+  color: #cbd5f5;
+}
+
+/* ================= BUTTONS ================= */
+body.dark .btn {
+  background-color: #3b82f6;
+}
+
+body.dark .btn:hover {
+  background-color: #2563eb;
+}
+
+body.dark .btn-outline,
+body.dark .navbar .btn-outline {
+  border-color: #60a5fa;
+  color: #60a5fa;
+  background: transparent;
+  /* Override white background from main.css */
+}
+
+body.dark .btn-outline:hover,
+body.dark .navbar .btn-outline:hover {
+  background-color: #60a5fa;
+  color: #0f172a;
+  /* Darker text on light blue hover */
+}
+
+/* ================= FEATURES ================= */
+body.dark .features {
+  background-color: #020617;
+}
+
+body.dark .feature-card {
+  background-color: #0f172a;
+}
+
+body.dark .feature-card h3 {
+  color: #f8fafc;
+}
+
+/* ================= DOMAINS ================= */
+body.dark .domain-card {
+  background-color: #020617;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.05);
+}
+
+/* removed solid color to allow gradient background-clip from main.css */
+
+/* ================= CTA ================= */
+body.dark .cta {
+  background-color: #1e40af;
+}
+
+/* ================= FOOTER ================= */
+body.dark .footer {
+  background-color: #020617;
+  color: #94a3b8;
+}
+
+/* ================= SMOOTH TRANSITION ================= */
+body,
+.navbar,
+.feature-card,
+.domain-card,
+.cta {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ================= AUTH DARK MODE ================= */
+
+body.dark .auth-container {
+  background: #020617;
+}
+
+body.dark .auth-box {
+  background: #0f172a;
+  color: #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid #1e293b;
+}
+
+body.dark .auth-box h2 {
+  color: #f8fafc;
+}
+
+body.dark .auth-box p,
+body.dark .divider,
+body.dark .switch-auth {
+  color: #94a3b8;
+}
+
+body.dark .input-group input,
+body.dark .input-group select {
+  background: #020617;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+body.dark .input-group input::placeholder {
+  color: #64748b;
+}
+
+body.dark .input-group i:first-child {
+  color: #94a3b8;
+  /* Lighter for better contrast */
+}
+
+body.dark .input-group input:focus,
+body.dark .input-group select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+}
+
+body.dark .toggle-password {
+  color: #64748b;
+}
+
+body.dark .toggle-password:hover {
+  color: #60a5fa;
+}
+
+body.dark .divider::before,
+body.dark .divider::after {
+  background: #1e293b;
+}
+
+body.dark .switch-auth a {
+  color: #60a5fa;
+}
